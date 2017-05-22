@@ -1,0 +1,22 @@
+
+html { height: 100%; }
+body { height: 100%; }
+
+div#pageWrapper { 
+	height: 100%;
+	background: linear-gradient(#9CC48D,#28CB99);;
+}
+
+h1#glyph_QuoteGlyph {
+	font-size: 100px;
+	position: absolute;
+}
+
+p#text_QuoteText {
+	padding: 10%;
+}
+
+div#card_QuoteCard {
+	margin-top: 25%;
+	background: rgba(255,255,255,0.85);
+}
