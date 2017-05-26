@@ -2,21 +2,49 @@
 html { height: 100%; }
 body { height: 100%; }
 
+a {
+	text-transform: lowercase;
+}
+
+a:link, a:visited {
+	color: white;
+}
+
+a:hover, a:active {
+	color: hotpink;
+	font-style: bold;
+	text-decoration: none;
+}
+
 div#pageWrapper { 
 	height: 100%;
 	background: linear-gradient(#9CC48D,#28CB99);;
 }
 
-h1#glyph_QuoteGlyph {
+h1#QuoteGlyph {
+	font: 'Helvetica Neue';
 	font-size: 100px;
+	color: hotpink;
 	position: absolute;
+	visibility: hidden;
 }
 
-p#text_QuoteText {
+blockquote#QuoteText {
 	padding: 10%;
+	margin-top: 10%;
+	text-align: center;
 }
 
-div#card_QuoteCard {
+p#QuoteAuthor {
+	font-style: italic;
+	color: gray;
+	margin-top: -5%;
+	margin-right: 5%;
+	text-align: right;
+}
+
+div#QuoteCard {
 	margin-top: 25%;
-	background: rgba(255,255,255,0.85);
+	margin-bottom: 5%;
+	background: rgba(255,255,255,.75);
 }
