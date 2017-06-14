@@ -3,49 +3,49 @@ html { height: 100%; }
 body { height: 100%; }
 
 a {
-	font-weight: 200;
-	text-transform: lowercase;
+  font-weight: 200;
+  text-transform: lowercase;
 }
 
 a:link, a:visited {
-	color: white;
+  color: white;
 }
 
 a:hover, a:active {
-	color: hotpink;
-	font-style: bold;
-	text-decoration: none;
+  color: hotpink;
+  font-style: bold;
+  text-decoration: none;
 }
 
 div#pageWrapper { 
-	height: 100%;
-	background: linear-gradient(#9CC48D,#28CB99);;
+  height: 100%;
+  background: linear-gradient(#9CC48D,#28CB99);;
 }
 
 h1#QuoteGlyph {
-	font: 'Helvetica Neue';
-	font-size: 100px;
-	color: hotpink;
-	position: absolute;
-	visibility: hidden;
+  font: 'Helvetica Neue';
+  font-size: 100px;
+  color: hotpink;
+  position: absolute;
+  visibility: hidden;
 }
 
 blockquote#QuoteText {
-	padding: 10%;
-	margin-top: 10%;
-	text-align: center;
+  padding: 10%;
+  margin-top: 10%;
+  text-align: center;
 }
 
 p#QuoteAuthor {
-	font-style: italic;
-	color: gray;
-	margin-top: -5%;
-	margin-right: 5%;
-	text-align: right;
+  font-style: italic;
+  color: gray;
+  margin-top: -5%;
+  margin-right: 5%;
+  text-align: right;
 }
 
 div#QuoteCard {
-	margin-top: 25%;
-	margin-bottom: 5%;
-	background: rgba(255,255,255,.75);
+  margin-top: 25%;
+  margin-bottom: 5%;
+  background: rgba(255,255,255,.75);
 }

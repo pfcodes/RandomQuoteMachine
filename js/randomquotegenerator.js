@@ -23,9 +23,13 @@ QuoteGenerator = {
     QuoteGenerator.objects.author.text('')
     QuoteGenerator.objects.glyph.css('visibility', 'hidden')
     $.ajax({
-      url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en',
+      url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en',
+      type: 'GET',
       crossDomain: true,
-      dataType: 'json',
+      xhrFields: {
+        withCredentials: true
+      },
+      dataType: 'jsonp',
       success: function (data) {
         let q = QuoteGenerator.objects
         q.quote.text(data.quoteText)
