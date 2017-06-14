@@ -22,12 +22,16 @@ QuoteGenerator = {
     QuoteGenerator.objects.quote.text('Loading...')
     QuoteGenerator.objects.author.text('')
     QuoteGenerator.objects.glyph.css('visibility', 'hidden')
-    $.getJSON('http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en',
-      function (data) {
+    $.ajax({
+      url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en',
+      crossDomain: true,
+      dataType: 'json',
+      success: function (data) {
         let q = QuoteGenerator.objects
         q.quote.text(data.quoteText)
         q.author.text('- ' + data.quoteAuthor)
         q.glyph.css('visibility', 'visible')
+      }
     })
   }
 }
