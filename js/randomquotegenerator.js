@@ -23,17 +23,15 @@ QuoteGenerator = {
     QuoteGenerator.objects.author.text('')
     QuoteGenerator.objects.glyph.css('visibility', 'hidden')
     $.ajax({
-      url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en',
+      url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseJSONP&lang=en',
       type: 'GET',
       crossDomain: true,
-      xhrFields: {
-        withCredentials: true
-      },
       dataType: 'jsonp',
-      success: function (data) {
+      jsonp: 'jsonp',
+      success: function(data) {
         let q = QuoteGenerator.objects
         q.quote.text(data.quoteText)
-        q.author.text('- ' + data.quoteAuthor)
+        q.author.text(`- ${data.quoteAuthor}`)
         q.glyph.css('visibility', 'visible')
       }
     })
